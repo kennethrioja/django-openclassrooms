@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>vkg | games</title>
+</head>
+
+<body>
+    <h1>List of games</h1>
+    <p>Since the begining of our collaboration, we have created {{games|length}} game{%if games|length > 1%}s{%else%}{%endif%}. By order of creation, the oldest games are listed first :</p>
+    <ul>
+        {% for game in games%}
+        <li>{{game.title}}</li>
+        {% endfor%}
+    </ul>
+</body>
+
+</html>

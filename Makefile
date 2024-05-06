@@ -1,4 +1,4 @@
-NAME = merchex
+NAME = verykoolgames
 
 PYTHON = python3
 ENV_NAME = env
