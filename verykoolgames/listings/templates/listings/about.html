@@ -1,13 +1,9 @@
-<html>
+{% extends 'listings/base.html' %}
 
-<head>
-    <title>vkg | about</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>À propos</h1>
-    <p>Nous sommes {{players|length}} kool kids visant la création d'expériences ludiques pour tous-tes-tex.</p>
-    <p>Nous avons actuellement créé {{games|length}} jeux.</p>
-</body>
+<h1>À propos</h1>
+<p>Nous sommes {{players|length}} kool kids visant la création d'expériences ludiques pour tous-tes-tex.</p>
+<p>Nous avons actuellement créé {{games|length}} jeux.</p>
 
-</html>
+{% endblock %}

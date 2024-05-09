@@ -1,12 +1,16 @@
-<html>
+{% extends 'listings/base.html' %}
 
-<head>
-    <title>vkg | contact</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Contact</h1>
-    <p>Vous pouvez nous contacter sur notre <a href='https://www.instagram.com/verykoolgames'>Instagram</a></p>
-</body>
+<h1>Contact</h1>
+<p>Vous pouvez nous contacter sur notre <a href='https://www.instagram.com/verykoolgames'>Instagram</a></p>
 
-</html>
+<p>Ou envoyez-nous un message ici</p>
+
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="Envoyer">
+</form>
+
+{% endblock %}

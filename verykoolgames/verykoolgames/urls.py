@@ -21,8 +21,9 @@ from listings import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.hello),
-    path("about/", views.about),
-    path("contact/", views.contact),
-    path("games/", views.games),
+    path("", views.index, name="index"),
+    path("about/", views.about, name="about"),
+    path("games/", views.games, name="games"),
+    path("games/<int:game_id>", views.games_detail, name="games_detail"),
+    path("contact/", views.contact, name="contact"),
 ]

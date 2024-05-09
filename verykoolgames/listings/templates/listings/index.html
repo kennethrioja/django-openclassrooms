@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Welcome in VeryKoolGames!</h1>
+
+<p>We are an indie video game studio created by {{players|length}} co-founders:</p>
+
+<ul>
+    {% for player in players%}
+        <li>{{player.name|upper}}</li>
+    {% endfor%}
+</ul>
+
+{% endblock %}

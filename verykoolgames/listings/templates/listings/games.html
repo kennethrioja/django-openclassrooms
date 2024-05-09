@@ -1,17 +1,13 @@
-<html>
+{% extends 'listings/base.html' %}
 
-<head>
-    <title>vkg | games</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>List of games</h1>
-    <p>Since the begining of our collaboration, we have created {{games|length}} game{%if games|length > 1%}s{%else%}{%endif%}. By order of creation, the oldest games are listed first :</p>
-    <ul>
-        {% for game in games%}
-        <li>{{game.title}}</li>
-        {% endfor%}
-    </ul>
-</body>
+<h1>List of games</h1>
+<p>Since the begining of our collaboration, we have created {{games|length}} game{%if games|length > 1%}s{%else%}{%endif%}. By order of creation, the oldest games are listed first :</p>
+<ul>
+    {% for game in games%}
+    <li><a href="{% url 'games_detail' game.id %}">{{ game.title }}</a></li>
+    {% endfor%}
+</ul>
 
-</html>
+{% endblock %}

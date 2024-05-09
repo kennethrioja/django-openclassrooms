@@ -1,0 +1,16 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ game.title }}</h2>
+
+<ul>
+    <li>Description: {{ game.description }}</li>
+    <li>Genre: {{ game.get_type_display }}</li>
+    <li>Release Year: {{ game.year }}</li>
+    <li>Sold: {{ game.sold|yesno }}
+</ul>
+
+<a href="{% url 'games' %}">Back to games</a>
+
+{% endblock %}
