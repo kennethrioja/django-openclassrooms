@@ -2,6 +2,16 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.core.mail import send_mail
 from listings.models import Player, Game
 from listings.forms import ContactUsForm
+from listings.serializers import GameSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+
+class CategoryAPIView(APIView):
+    def get(self, *args, **kwargs):
+        categories = Game.objects.all()
+        serializer = GameSerializer(categories, many=True)
+        return Response(serializer.data)
 
 
 def index(request):

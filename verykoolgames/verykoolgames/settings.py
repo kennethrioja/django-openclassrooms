@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "listings",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Email Backend in Terminal
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# REST framework
